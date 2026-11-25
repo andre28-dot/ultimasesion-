@@ -1,0 +1,114 @@
+
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: #263b63;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #a9c7ff;
+}
+
+/* Contenido principal */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+/* Secciones */
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: #263b63;
+    margin-bottom: 15px;
+}
+
+/* Artículos */
+article {
+    background-color: #edf2fa;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+article h3 {
+    color: #365b91;
+    margin-bottom: 8px;
+}
+
+/* Información adicional */
+aside {
+    background-color: #dce8f8;
+    padding: 20px;
+    border-left: 5px solid #263b63;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #263b63;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Diseño adaptable a celulares */
+@media (max-width: 600px) {
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+}
