@@ -1,23 +1,27 @@
 
+
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página web con estructura HTML semántica">
-    <title>Mi página web</title>
+    <meta name="description" content="Página web de tecnología e innovación">
+    <title>NovaTech | Tecnología e Innovación</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-    <!-- Encabezado -->
-    <header>
-        <h1>Mi página web</h1>
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
 
-        <!-- Menú de navegación -->
-        <nav aria-label="Navegación principal">
+        <a href="#inicio" class="logo">
+            <span>✦</span> NovaTech
+        </a>
+
+        <nav class="navegacion" aria-label="Menú principal">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
@@ -25,52 +29,198 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
+
+        <a href="#contacto" class="btn-contacto">Contáctanos</a>
+
     </header>
 
-    <!-- Contenido principal -->
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
 
-        <!-- Sección de inicio -->
-        <section id="inicio">
-            <h2>Bienvenidos</h2>
-            <p>Esta es mi primera página web utilizando HTML5 semántico y CSS3.</p>
+        <!-- INICIO -->
+        <section class="hero" id="inicio">
+
+            <div class="hero-contenido">
+                <span class="etiqueta">INNOVACIÓN DIGITAL</span>
+
+                <h1>
+                    Creamos el futuro
+                    <span>con tecnología.</span>
+                </h1>
+
+                <p>
+                    Transformamos ideas en soluciones digitales.
+                    Descubre cómo la tecnología puede impulsar
+                    tus proyectos hacia nuevas oportunidades.
+                </p>
+
+                <div class="hero-botones">
+                    <a href="#servicios" class="btn-principal">
+                        Explorar servicios →
+                    </a>
+
+                    <a href="#nosotros" class="btn-secundario">
+                        Conócenos
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-imagen">
+                <div class="circulo">
+                    <span>✧</span>
+                    <div class="texto-circulo">
+                        <strong>INNOVAR</strong>
+                        <small>ES CREAR</small>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
-        <!-- Sección nosotros -->
-        <section id="nosotros">
-            <h2>Sobre nosotros</h2>
-            <p>Somos una organización dedicada a ofrecer soluciones y servicios.</p>
+        <!-- NOSOTROS -->
+        <section class="nosotros" id="nosotros">
+
+            <div class="titulo-seccion">
+                <span>QUIÉNES SOMOS</span>
+                <h2>Ideas que se convierten en soluciones</h2>
+                <p>
+                    Combinamos creatividad, conocimiento y tecnología
+                    para construir experiencias digitales.
+                </p>
+            </div>
+
+            <div class="nosotros-contenido">
+
+                <article class="tarjeta-info">
+                    <span class="icono">💡</span>
+                    <h3>Nuestra misión</h3>
+                    <p>
+                        Ofrecer soluciones tecnológicas innovadoras
+                        que faciliten los procesos y mejoren
+                        la experiencia de nuestros usuarios.
+                    </p>
+                </article>
+
+                <article class="tarjeta-info">
+                    <span class="icono">🚀</span>
+                    <h3>Nuestra visión</h3>
+                    <p>
+                        Ser una empresa reconocida por su creatividad,
+                        compromiso y desarrollo de soluciones digitales.
+                    </p>
+                </article>
+
+                <article class="tarjeta-info">
+                    <span class="icono">💜</span>
+                    <h3>Nuestros valores</h3>
+                    <p>
+                        Responsabilidad, innovación, trabajo en equipo
+                        y compromiso con la calidad.
+                    </p>
+                </article>
+
+            </div>
+
         </section>
 
-        <!-- Sección de servicios -->
-        <section id="servicios">
-            <h2>Nuestros servicios</h2>
+        <!-- SERVICIOS -->
+        <section class="servicios" id="servicios">
 
-            <article>
-                <h3>Diseño web</h3>
-                <p>Creación de páginas web modernas y funcionales.</p>
-            </article>
+            <div class="titulo-seccion">
+                <span>LO QUE HACEMOS</span>
+                <h2>Nuestros servicios</h2>
+                <p>
+                    Soluciones pensadas para las necesidades
+                    del mundo digital.
+                </p>
+            </div>
 
-            <article>
-                <h3>Desarrollo web</h3>
-                <p>Desarrollo de aplicaciones y sistemas informáticos.</p>
-            </article>
+            <div class="servicios-contenido">
+
+                <article class="tarjeta-servicio">
+                    <div class="icono-servicio">💻</div>
+                    <h3>Diseño web</h3>
+                    <p>
+                        Diseñamos sitios web modernos, atractivos
+                        y adaptables a diferentes dispositivos.
+                    </p>
+                    <a href="#contacto">Conocer más →</a>
+                </article>
+
+                <article class="tarjeta-servicio">
+                    <div class="icono-servicio">⚙️</div>
+                    <h3>Desarrollo de software</h3>
+                    <p>
+                        Creamos sistemas y aplicaciones
+                        para resolver problemas reales.
+                    </p>
+                    <a href="#contacto">Conocer más →</a>
+                </article>
+
+                <article class="tarjeta-servicio">
+                    <div class="icono-servicio">🔒</div>
+                    <h3>Seguridad informática</h3>
+                    <p>
+                        Promovemos buenas prácticas para
+                        proteger la información digital.
+                    </p>
+                    <a href="#contacto">Conocer más →</a>
+                </article>
+
+            </div>
 
         </section>
 
-        <!-- Información adicional -->
-        <aside>
-            <h2>Información adicional</h2>
-            <p>Conoce más sobre nuestros proyectos y actividades.</p>
-        </aside>
+        <!-- LLAMADO A LA ACCIÓN -->
+        <section class="invitacion">
+
+            <h2>¿Tienes una idea en mente?</h2>
+
+            <p>
+                Estamos listos para convertir tus ideas
+                en proyectos tecnológicos.
+            </p>
+
+            <a href="#contacto" class="btn-principal">
+                Hablemos de tu proyecto →
+            </a>
+
+        </section>
+
+        <!-- CONTACTO -->
+        <section class="contacto" id="contacto">
+
+            <div class="titulo-seccion">
+                <span>CONTACTO</span>
+                <h2>Conectemos contigo</h2>
+                <p>Nos encantaría conocer tus ideas y proyectos.</p>
+            </div>
+
+            <address class="datos-contacto">
+                <p>✉ Correo: contacto@novatech.com</p>
+                <p>📍 Ubicación: El Salvador</p>
+                <p>☎ Teléfono: +503 2222-2222</p>
+            </address>
+
+        </section>
 
     </main>
 
-    <!-- Pie de página -->
-    <footer id="contacto">
-        <p>&copy; 2026 Mi página web. Todos los derechos reservados.</p>
-        <p>Contacto: ejemplo@correo.com</p>
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+
+        <a href="#inicio" class="logo">
+            <span>✦</span> NovaTech
+        </a>
+
+        <p>
+            © 2026 NovaTech. Todos los derechos reservados.
+        </p>
+
+        <a href="#inicio">Volver arriba ↑</a>
+
     </footer>
 
 </body>
 </html>
+
