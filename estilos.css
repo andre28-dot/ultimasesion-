@@ -1,114 +1,476 @@
 
-/* Configuración general */
+/* ==================================
+   CONFIGURACIÓN GENERAL
+================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-/* Estilos del cuerpo */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #faf8ff;
+    color: #29223b;
     line-height: 1.6;
 }
 
-/* Encabezado */
-header {
-    background-color: #263b63;
-    color: white;
-    padding: 25px;
-    text-align: center;
+/* ==================================
+   ENCABEZADO
+================================== */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background-color: white;
+    box-shadow: 0 3px 15px rgba(50, 30, 80, 0.06);
 }
 
-header h1 {
-    margin-bottom: 15px;
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #56318d;
+    text-decoration: none;
 }
 
-/* Navegación */
-nav ul {
+.logo span {
+    color: #d65da8;
+}
+
+.navegacion ul {
+    display: flex;
+    gap: 35px;
     list-style: none;
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #51475f;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navegacion a:hover {
+    color: #a64dba;
+}
+
+.btn-contacto {
+    background-color: #7046a5;
+    color: white;
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn-contacto:hover {
+    background-color: #4e2d7c;
+    transform: translateY(-3px);
+}
+
+/* ==================================
+   SECCIÓN PRINCIPAL
+================================== */
+
+.hero {
+    min-height: 540px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10%;
+    background: linear-gradient(120deg, #f0e8ff, #fceafa);
+    gap: 40px;
+}
+
+.hero-contenido {
+    max-width: 600px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #9b4eb3;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #9650b5;
+}
+
+.hero p {
+    color: #665d72;
+    font-size: 17px;
+    margin-bottom: 30px;
+    max-width: 490px;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-principal {
+    display: inline-block;
+    background: linear-gradient(120deg, #7046a5, #b14eaa);
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-principal:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(112, 70, 165, 0.25);
+}
+
+.btn-secundario {
+    display: inline-block;
+    border: 2px solid #8054a8;
+    color: #7046a5;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-secundario:hover {
+    background-color: #7046a5;
+    color: white;
+}
+
+/* ==================================
+   ILUSTRACIÓN PRINCIPAL
+================================== */
+
+.hero-imagen {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.circulo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a76bd0, #e78bc5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 20px 50px rgba(125, 75, 170, 0.25);
+    border: 12px solid rgba(255, 255, 255, 0.5);
+}
+
+.circulo > span {
+    font-size: 90px;
+}
+
+.texto-circulo {
+    text-align: center;
+    letter-spacing: 4px;
+}
+
+.texto-circulo strong {
+    display: block;
+    font-size: 22px;
+}
+
+.texto-circulo small {
+    font-size: 12px;
+}
+
+/* ==================================
+   TÍTULOS DE SECCIONES
+================================== */
+
+.titulo-seccion {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.titulo-seccion span {
+    color: #a451b3;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.titulo-seccion h2 {
+    font-size: 34px;
+    margin: 12px 0;
+    color: #352449;
+}
+
+.titulo-seccion p {
+    color: #777080;
+}
+
+/* ==================================
+   SECCIÓN NOSOTROS
+================================== */
+
+.nosotros {
+    padding: 90px 10%;
+}
+
+.nosotros-contenido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
-nav a {
-    color: white;
+.tarjeta-info {
+    background-color: white;
+    padding: 35px 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 25px rgba(50, 30, 80, 0.06);
+    transition: 0.3s;
+}
+
+.tarjeta-info:hover {
+    transform: translateY(-8px);
+}
+
+.icono {
+    font-size: 38px;
+}
+
+.tarjeta-info h3 {
+    color: #7046a5;
+    margin: 15px 0;
+}
+
+/* ==================================
+   SERVICIOS
+================================== */
+
+.servicios {
+    padding: 90px 10%;
+    background-color: #f0ebf9;
+}
+
+.servicios-contenido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta-servicio {
+    background-color: white;
+    padding: 35px 28px;
+    border-radius: 18px;
+    border-bottom: 4px solid #a65bbd;
+    transition: 0.3s;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(80, 40, 110, 0.12);
+}
+
+.icono-servicio {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-servicio h3 {
+    color: #56318d;
+    margin-bottom: 12px;
+}
+
+.tarjeta-servicio p {
+    color: #777080;
+    margin-bottom: 20px;
+}
+
+.tarjeta-servicio a {
+    color: #a451b3;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav a:hover {
-    color: #a9c7ff;
+/* ==================================
+   INVITACIÓN
+================================== */
+
+.invitacion {
+    margin: 80px 10%;
+    padding: 65px 25px;
+    text-align: center;
+    color: white;
+    border-radius: 25px;
+    background: linear-gradient(120deg, #65409b, #bd62b2);
 }
 
-/* Contenido principal */
-main {
-    width: 90%;
-    max-width: 1100px;
-    margin: 30px auto;
-}
-
-/* Secciones */
-section {
-    background-color: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-}
-
-section h2 {
-    color: #263b63;
+.invitacion h2 {
+    font-size: 34px;
     margin-bottom: 15px;
 }
 
-/* Artículos */
-article {
-    background-color: #edf2fa;
-    padding: 20px;
-    margin-top: 15px;
-    border-radius: 8px;
-}
-
-article h3 {
-    color: #365b91;
-    margin-bottom: 8px;
-}
-
-/* Información adicional */
-aside {
-    background-color: #dce8f8;
-    padding: 20px;
-    border-left: 5px solid #263b63;
+.invitacion p {
     margin-bottom: 25px;
-    border-radius: 5px;
+    color: #f5eafa;
 }
 
-/* Pie de página */
-footer {
-    background-color: #263b63;
+.invitacion .btn-principal {
+    background-color: white;
+    color: #7046a5;
+}
+
+/* ==================================
+   CONTACTO
+================================== */
+
+.contacto {
+    padding: 70px 10%;
+}
+
+.datos-contacto {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(50, 30, 80, 0.06);
+    font-style: normal;
+}
+
+.datos-contacto p {
+    padding: 10px;
+    border-bottom: 1px solid #eee8f5;
+}
+
+/* ==================================
+   PIE DE PÁGINA
+================================== */
+
+.pie-pagina {
+    background-color: #30213f;
     color: white;
-    text-align: center;
-    padding: 20px;
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-/* Diseño adaptable a celulares */
+.pie-pagina .logo {
+    color: white;
+}
+
+.pie-pagina p {
+    color: #d4c9df;
+    font-size: 14px;
+}
+
+.pie-pagina > a:last-child {
+    color: #e9b4e2;
+    text-decoration: none;
+}
+
+/* ==================================
+   DISEÑO RESPONSIVE
+================================== */
+
+@media (max-width: 900px) {
+
+    .encabezado {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-contenido {
+        max-width: 100%;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-botones {
+        justify-content: center;
+    }
+
+    .nosotros-contenido,
+    .servicios-contenido {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
 @media (max-width: 600px) {
 
-    nav ul {
+    .encabezado {
         flex-direction: column;
-        gap: 10px;
     }
 
-    main {
-        width: 95%;
+    .navegacion ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 
-    section {
-        padding: 18px;
+    .hero {
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .circulo {
+        width: 230px;
+        height: 230px;
+    }
+
+    .circulo > span {
+        font-size: 65px;
+    }
+
+    .nosotros-contenido,
+    .servicios-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 27px;
+    }
+
+    .invitacion h2 {
+        font-size: 27px;
+    }
+
+    .pie-pagina {
+        flex-direction: column;
+        text-align: center;
     }
 
 }
+
